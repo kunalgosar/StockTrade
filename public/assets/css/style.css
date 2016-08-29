@@ -57,6 +57,9 @@ h1, h2 {
     padding-bottom: 70px;
 }
 
+#loginModal {
+    border-radius: 0px;
+}
 .modal-content {
     background-color: gray;
 }
@@ -1117,6 +1120,7 @@ li > a {
   width: 120px;
   border: 0px white;
   border-radius: 1.5px;
+  height:35px;
 }
 
 .signup-button:hover, .signup-button:active {
