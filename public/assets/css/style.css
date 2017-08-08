@@ -2,12 +2,11 @@
 /* Standard Page Layout */
 
 
-body,html {
+body, html {
     background-color: #2B2B2B;
     position: relative;
     font-family: 'Open Sans',sans-serif;
     font-weight: 400;
-    width: 100vw;
 }
 
 main {
@@ -36,6 +35,7 @@ p.titledescription, p.description {
 
 header {
   height: 100vh;
+  background-color: #272727;
 }
 
 body.container {
@@ -46,6 +46,13 @@ body.container {
 
 h1, h2 {
     text-align: center;
+}
+
+button:focus {
+    outline:none;
+}
+button:active {
+    outline:none;
 }
 
 
@@ -107,20 +114,25 @@ h1, h2 {
 
 /* ----- Intro Page ----- */
 .intro-header {
-    /* If you're making other pages, make sure there is 50px of padding to make sure the navbar doesn't overlap content! */
-    padding-top: 50px;
-    /*padding-bottom: 50px;*/
-    /*background: url(/assets/img/homeBackground-new.jpg) no-repeat center center;*/
-    /*background-size:cover;*/
-    text-align: center;
+    display: relative;
+    margin-top: -50px;
+    height: 100vh;
     color: #f8f8f8;
-    height: 100%;
+}
+
+.intro-header .row {
+	height: 100%;
+}
+
+.intro-header .col-lg-12 {
+	display: table;
+	height: 100%;
+    text-align: center;
 }
 
 .intro-message {
-    position: relative;
-    padding-top: 10%;
-    padding-bottom: 20%;
+    display: table-cell;
+    vertical-align: middle;
 }
 
 .intro-message > h1 {
@@ -292,16 +304,7 @@ p.lead, h2.section-heading {
 
 .jumbotron {
     padding-top: 50px;
-    background: inherit;
-}
-
-
-
-
-
-.aboutus {
-    padding-top: 5%;
-    padding-bottom: 0;
+    /*background: inherit;*/
 }
 
 .description {
@@ -430,7 +433,7 @@ body.footer {
     background: #666;
 }
 
-.table-header > [class*='col-'] {
+.table-header > [class*=col-] {
     padding: 0;
 }
 
@@ -575,7 +578,17 @@ body.footer {
 }
 
 .buysellModals {
-    background-color: #485a55;
+    background-color: #a2a2a2;
+}
+
+.buysell-button {
+  background-color: grey;
+  border-color: #737373;
+}
+
+.buysell-button:hover, .buysell-button:active, .buysell-button:focus, .buysell-button:visited {
+  background-color: #616161;
+  border-color: #737373;
 }
 
 .currentStockPrice {
@@ -983,15 +996,27 @@ svg.main-svg {
 /* -----Styles for API Page----- */
 .api-page {
     background-color: #f2f2f2;
-    margin-top: 17px;
-    margin-bottom: 10px;
-    padding-bottom: 0px;
     margin: 0px 0px 0px 0px;
+    width: inherit;
+    padding-left: 15px;
+    padding-bottom: 50px;
 }
 
 
-#title {
-    margin: 30px 0px 30px 25vw;
+#title{
+
+}
+
+.title-standard {
+    margin: 30px 0px 30px 0px;
+    text-align:left;
+    padding-left: -20px;
+}
+
+.title-mobile{
+    margin: 30px 0px 30px 0px;
+    float:center;
+    padding-left: -20px;
 }
 
 
@@ -1018,7 +1043,7 @@ svg.main-svg {
     background-color: #d9d9d9;
     border-radius: 0px 5px 5px 0px;
     margin: 5px 0px 5px 0px;
-    padding: 4px 0px 4px 8px;
+    padding: 4px 0px 4px 0px;
     border:0px;
     width:150px;
     text-align: left;
@@ -1039,76 +1064,74 @@ li > a {
 .sidebar {
     padding-top: 0px;
     position:fixed;
-    margin-bottom: 80px;
+    margin-bottom: 70px;
+    border-right: 1.5px #d9d9d9;
 }
 
 #sidebar-nav {
     list-style: none;
     padding: 0px 0px 0px 0px;
     background-color: #f2f2f2;
-    width: 240px;
-    margin-left: 20px;
+    width: 14vw;
+    margin-left: 2vw;
     margin-top: -80px;
 }
 
-<<<<<<< HEAD
-.api-footer {
+/*.api-footer {
     background-color:white;
     width: 80vh!important;
     height: 380px;
-}
-=======
-.bot-account-help {
+}*/
 
-  color: white;
-  float: right;
-  right: -4px;
+.bot-account-help {
+    color: white;
+    float: right;
+    right: -4px;
 }
 
 .bot-account-help:hover p{
-	display:block;
-	transform-origin: 100% 0%;
+    display:block;
+    transform-origin: 100% 0%;
 
-	-webkit-animation: fadeIn 0.2s ease-in-out;
-	animation: fadeIn 0.2s ease-in-out;
-
+    -webkit-animation: fadeIn 0.2s ease-in-out;
+    animation: fadeIn 0.2s ease-in-out;
 }
 
-.bot-account-help p {	/* The tooltip */
-  font-family: 'Open Sans',sans-serif;
-  font-weight: 400;
-	display: none;
-	text-align: left;
-	background-color: #1E2021;
-	padding: 20px;
-	width: 315px;
-	position: absolute;
-	border-radius: 3px;
-	box-shadow: 1px 1px 1px rgba(0, 0, 0, 0.2);
-	color: #FFF;
-  right: -10px;
-	font-size: 13px;
-	line-height: 1.4;
+.bot-account-help p {    /* The tooltip */
+    font-family: 'Open Sans',sans-serif;
+    font-weight: 400;
+    display: none;
+    text-align: left;
+    background-color: #1E2021;
+    padding: 20px;
+    width: 315px;
+    position: absolute;
+    border-radius: 3px;
+    box-shadow: 1px 1px 1px rgba(0, 0, 0, 0.2);
+    color: #FFF;
+    right: -10px;
+    font-size: 13px;
+    line-height: 1.4;
 }
 
 .bot-account-help p:before{ /* The pointer of the tooltip */
-	position: absolute;
-	content: '';
-	width:0;
-	height: 0;
-	border:6px solid transparent;
-	border-bottom-color:#1E2021;
-	right:10px;
-	top:-12px;
+    position: absolute;
+    content: '';
+    width:0;
+    height: 0;
+    border:6px solid transparent;
+    border-bottom-color:#1E2021;
+    right:10px;
+    top:-12px;
 }
 
 .bot-account-help p:after{ /* Prevents the tooltip from being hidden */
-	width:100%;
-	height:40px;
-	content:'';
-	position: absolute;
-	top:-40px;
-	left:0;
+    width:100%;
+    height:40px;
+    content:'';
+    position: absolute;
+    top:-40px;
+    left:0;
 }
 
 .signup-button {
@@ -1121,6 +1144,10 @@ li > a {
   border: 0px white;
   border-radius: 1.5px;
   height:35px;
+<<<<<<< HEAD
+=======
+  max-width: 80%;
+>>>>>>> 7d7e64ef2dc7bf7f2c5abc5fe2701f03ee675578
 }
 
 .signup-button:hover, .signup-button:active {
@@ -1135,20 +1162,18 @@ a.signup-button {
 /* CSS animation */
 
 @-webkit-keyframes fadeIn {
-	0% {
-		opacity:0;
-		transform: scale(0.6);
-	}
+    0% {
+        opacity:0;
+        transform: scale(0.6);
+    }
 
-	100% {
-		opacity:100%;
-		transform: scale(1);
-	}
+    100% {
+        opacity:100%;
+        transform: scale(1);
+    }
 }
 
 @keyframes fadeIn {
-	0% { opacity:0; }
-	100% { opacity:100%; }
+    0% { opacity:0; }
+    100% { opacity:100%; }
 }
-
->>>>>>> 0536eb1c58df7610dcf78e3cd0ca603769d7aa12
