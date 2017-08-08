@@ -13,7 +13,7 @@ angular.module('signupController', [])
       vm.error = "Passwords don't match!";
     } else if (vm.signupData.password.length < 6) {
       vm.error = "Password must be longer than 6 characters";
-    } else if (vm.signupData.password.match(/.*@.*\..*/g == null)) {
+    } else if (vm.signupData.email.match(/.*@.*\..*/g == null)) {
       vm.error = "Email is invalid";
     } else {
 
